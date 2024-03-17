@@ -240,7 +240,7 @@ function createFilterButton(placesingleArray, view, d1, API_URL) {
 
 let totalItems;
 var currentPage = 0;
-
+// comment
 
 export function mainContent(API_URL, content) {
 
