@@ -25,13 +25,10 @@ export function hoverDiv(parentElement, elementType, array, someEvent, isClickab
         if (!element) {
             element = listConstructor(parentElement, elementType, array, isClickable);
         }
-        // else {
-        //     element.remove();
-        // }
+       
         
     });
 }
-
 
 export function listConstructor(parentElement, elementType, array, isClickable) {
     const div = createNewElement("div", parentElement, elementType + "-" + parentElement.id, elementType + "-" + parentElement.id);
@@ -59,8 +56,6 @@ export function createEvent(element, eventTag) {
         
     });
 }
-
-
 
 export function registrationForm(parentElement, divElement, buttonElementClose, h3Element, userNameElement,
     phoneNumberElement, buttonElementContinue, pElement, div1Element, div2Element, div3Element, div4Element) {
@@ -109,21 +104,10 @@ export function registrationForm(parentElement, divElement, buttonElementClose, 
         div1ElementH5.textContent = "Continue with Facebook"
 
         
-        // var div2Element = createNewElement("div", divElement);
-        // div2Element.setAttribute("id", "div2ElementUser");
         
-        // var div3Element = createNewElement("div", divElement);
-        // div3Element.setAttribute("id", "div3ElementUser");
-        
-        // var div4Element = createNewElement("div", divElement);
-        // div4Element.setAttribute("id", "div4ElementUser");
         
         buttonUserClose.addEventListener("click", function() {
-            console.log("Attempting to remove divElement:", divElement);
-            // divElement.remove();
-            divElement.classList.add("none")
-            console.log("Form removed");
-            console.log("Is divElement still in the DOM?", document.contains(divElement));
+            window.location.reload();
         });
     }
         
@@ -131,9 +115,6 @@ export function registrationForm(parentElement, divElement, buttonElementClose, 
             
     
 }
-
-
-
 
 function saveData(userNameElement, phoneNumberElement) {
     var inputName = userNameElement.value;
@@ -241,7 +222,6 @@ function createFilterButton(placesingleArray, view, d1, API_URL) {
 let totalItems;
 var currentPage = 0;
 
-
 export function mainContent(API_URL, content) {
 
     var currentPage = 0;
@@ -283,8 +263,6 @@ function updatePagination(itemsPerPage) {
         pagination.appendChild(pageNumberButton);
     }
 }
-
-
 
 export function searchContentMetod(searchContentValue, content, currentPage, itemsPerPage) {
     const API_URL = "https://api2.myhome.ge/api/ka/search";
